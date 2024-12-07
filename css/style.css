@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: "TIMMONS NY 2.005";
+    src: url(../fonts/TIMMONSNY-Regular.ttf) format("truetype");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: Neue Montreal;
+    src: url(../fonts/NeueMontreal-Light.otf) format("opentype");
+    font-weight: 300
+}
+
+@font-face {
+    font-family: Neue Montreal;
+    src: url(../fonts/NeueMontreal-Regular.otf) format("opentype");
+    font-weight: 500
+}
+
+@font-face {
+    font-family: Neue Montreal;
+    src: url(../fonts/NeueMontreal-Medium.otf) format("opentype");
+    font-weight: 700
+}
+
+@font-face {
+    font-family: Neue Montreal;
+    src: url(../fonts/NeueMontreal-Bold.otf) format("opentype");
+    font-weight: 800
+}
+
+@font-face {
+    font-family: NeuroX;
+    src: url(../fonts/NeuroX-Light.ttf) format("truetype");
+    font-weight: 300
+}
+
+@font-face {
+    font-family: NeuroX;
+    src: url(../fonts/NeuroX-Regular.ttf) format("truetype");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: NeuroX;
+    src: url(../fonts/NeuroX-Bold.ttf) format("truetype");
+    font-weight: 700
+}
+
+:root {
+    --color-dark: #0e0e0e;
+    --color-light: #fff;
+    --text-color-dark: #0f0f0f;
+    --text-color-light: #646464
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background: var(--color-dark);
+    color: var(--color-light)
+}
+
+h1,
+h2,
+h3 {
+    font-family: "TIMMONS NY 2.005";
+    font-weight: 400;
+    text-transform: uppercase
+}
+
+h2 {
+    font-size: 60px
+}
+
+p,
+a {
+    font-family: Neue Montreal, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 100%;
+    font-size: 11px
+}
+
+p {
+    color: var(--text-color-light)
+}
+
+a {
+    position: relative;
+    color: var(--color-light);
+    text-decoration: none
+}
+
+.whitespace {
+    width: 100%;
+    height: 75px
+}
+
+section {
+    padding: 60px 22.5px
+}
+
+.desktop-version {
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.desktop-version p {
+    text-align: center;
+    color: var(--color-light);
+    font-size: 20px
+}
+
+.nav-container {
+    position: fixed;
+    width: 100vw;
+    padding: 20px;
+    z-index: 2
+}
+
+.nav-container nav {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 7.5px;
+    background: rgba(5, 5, 5, 0.678);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px)
+}
+
+.nav-container nav .nav-logo a {
+    position: relative;
+    top: 1.25px;
+    font-family: "Roboto";
+    font-size: 24px;
+}
+
+.nav-container nav .nav-cta a {
+    position: relative;
+    padding: 8px 4px
+}
+
+header {
+    width: 100%;
+    padding: 22.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em
+}
+
+header .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2em
+}
+
+header .row .header-block {
+    display: flex;
+    align-items: flex-end;
+    gap: 1em
+}
+
+header .row .header-block .header-item h1 {
+    font-size: 240px;
+    letter-spacing: -2.75px;
+    line-height: 70%
+}
+
+header .row:nth-child(2) {
+    justify-content: flex-end
+}
+
+header .row .header-block .header-item p {
+    color: var(--text-color-light)
+}
+
+@media (max-width: 800px) {
+    .nav-container nav .nav-logo a {
+        font-size: 12px
+    }
+
+    header .row .header-block .header-item h1 {
+        font-size: 100px;
+        letter-spacing: -1px
+    }
+}
+
+.notes-info {
+    width: 100%;
+    padding: 45px 22.5px
+}
+
+.notes-info .note {
+    width: 35%
+}
+
+@media (max-width: 800px) {
+    .notes-info .note {
+        width: 100%
+    }
+}
+
+.topics {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.topics .topic {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-light);
+    padding: 1px 8px 2.5px;
+    border-radius: 16px
+}
+
+.pro {
+    background: var(--color-light)
+}
+
+.pro h2 {
+    color: var(--text-color-dark);
+    margin-bottom: 10px
+}
+
+.pro p {
+    color: var(--text-color-dark)
+}
+
+.pro p span {
+    font-weight: bolder
+}
+
+.pro .btn {
+    border-radius: 4px;
+    width: max-content;
+    background: var(--text-color-dark);
+    padding: 16px 32px
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 22.5px
+}
+
+footer .copyright p {
+    font-size: 13px;
+    line-height: 1.2;
+    color: var(--color-light)
+}
+
+html.has-scroll-smooth {
+    overflow: hidden
+}
+
+html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.has-scroll-smooth body {
+    overflow: hidden
+}
+
+.has-scroll-smooth [data-scroll-container] {
+    min-height: 100vh
+}
+
+[data-scroll-direction=horizontal] [data-scroll-container] {
+    height: 100vh;
+    display: inline-block;
+    white-space: nowrap
+}
+
+[data-scroll-direction=horizontal] [data-scroll-section] {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    height: 100%
+}
+
+.c-scrollbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 11px;
+    height: 100%;
+    transform-origin: center right;
+    transition: transform .3s, opacity .3s;
+    opacity: 0
+}
+
+.c-scrollbar:hover {
+    transform: scaleX(1.45)
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+    opacity: 1
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar {
+    width: 100%;
+    height: 10px;
+    top: auto;
+    bottom: 0;
+    transform: scaleY(1)
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar:hover {
+    transform: scaleY(1.3)
+}
+
+.c-scrollbar_thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .5;
+    width: 7px;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: -webkit-grab;
+    cursor: grab
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+    cursor: -webkit-grabbing;
+    cursor: grabbing
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar_thumb {
+    right: auto;
+    bottom: 0
+}
+
+.topics-wrapper h2 span{
+    font-size: 30px;
+}
+
+.nav-cta{
+    font-family: "Roboto";
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-light);
+}
+
+#desktop-message h1, #desktop-message h1 a{
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--color-light);
+    padding: 10px;
+    text-transform: none;
+}
+
+#desktop-message {
+    height: 100vh;
+    gap: 20px;
+    height: 100vh;
+}
+
+.divider {
+    background-color: #ffffff;
+    display: inline-block;
+    width: 65px;
+    height: 3px;
+    rotate: -67deg;
+    margin: 10px 0;
+}
+
+#dm{
+    display: flex;
+    align-items: center;
+}
+
+/* From Uiverse.io by Yaya12085 */ 
+.code-editor {
+    max-width: 300px;
+    background-color: #1d1e22;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 2px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  
+  .title {
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 1.57px;
+    color: rgb(212 212 212);
+  }
+  
+  .icon {
+    width: 20px;
+    transition: .2s ease;
+  }
+  
+  .icon:hover {
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #6e7281;
+  }
+  
+  .editor-content {
+    margin: 0 10px 10px;
+    color: white;
+  }
+  
+  .property {
+    margin-left: 30px;
+  }
+  
+  .property:hover {
+    cursor: text;
+  }
+  
+  .editor-content .color-0 {
+    color: rgb(86 156 214);
+  }
+  
+  .editor-content .color-1 {
+    color: rgb(182 206 168);
+  }
+  
+  .editor-content .color-2 {
+    color: rgb(156 220 254);
+  }
+  
+  .editor-content .color-3 {
+    color: rgb(207 146 120);
+  }
+  
+  .color-preview-1,.color-preview-2 {
+    height: 8px;
+    width: 8px;
+    border: 1px solid #fff;
+    display: inline-block;
+    margin-right: 3px;
+  }
+  
+  .color-preview-1 {
+    background-color: #1d1e22;
+  }
+  
+  .color-preview-1 {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+  }
+  
+  .circle {
+    padding: 0 4px;
+  }
+  
+  .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+  }
+  
+  .red {
+    background-color: #ff605c;
+  }
+  
+  .yellow {
+    background-color: #ffbd44;
+  }
+  
+  .green {
+    background-color: #00ca4e;
+  }
+  
