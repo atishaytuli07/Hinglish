@@ -89,7 +89,7 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     line-height: 100%;
-    font-size: 11px
+    font-size: 13.5px
 }
 
 p {
@@ -159,7 +159,7 @@ section {
 
 header {
     width: 100%;
-    padding: 22.5px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 1em
@@ -169,23 +169,19 @@ header .row {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 2em
+    gap: 1.5em
 }
 
 header .row .header-block {
     display: flex;
     align-items: flex-end;
-    gap: 1em
+    gap: 0.8em
 }
 
 header .row .header-block .header-item h1 {
-    font-size: 240px;
-    letter-spacing: -2.75px;
-    line-height: 70%
-}
-
-header .row:nth-child(2) {
-    justify-content: flex-end
+    font-size: 210px;
+    letter-spacing: -1px;
+    line-height: 74%
 }
 
 header .row .header-block .header-item p {
@@ -200,6 +196,27 @@ header .row .header-block .header-item p {
     header .row .header-block .header-item h1 {
         font-size: 100px;
         letter-spacing: -1px
+    }
+}
+
+@media (max-width: 418px) {
+    .nav-container nav .nav-logo a {
+        font-size: 11px
+    }
+
+    header .row .header-block .header-item h1 {
+        font-size: 85px;
+        letter-spacing: -1px
+    }
+    header .row {
+        gap: 1em
+    }
+    
+    header .row .header-block {
+        gap: 0.5em
+    }
+    .topics-wrapper h2{
+        font-size: 50px;
     }
 }
 
@@ -226,7 +243,7 @@ header .row .header-block .header-item p {
 
 .topics .topic {
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid var(--color-light);
     padding: 1px 8px 2.5px;
     border-radius: 16px
@@ -238,7 +255,7 @@ header .row .header-block .header-item p {
 
 .pro h2 {
     color: var(--text-color-dark);
-    margin-bottom: 10px
+    margin-bottom: 15px
 }
 
 .pro p {
@@ -378,9 +395,11 @@ html.has-scroll-dragging {
 }
 
 #desktop-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
-    gap: 20px;
-    height: 100vh;
+    padding: 10px;
 }
 
 .divider {
@@ -397,9 +416,29 @@ html.has-scroll-dragging {
     align-items: center;
 }
 
-/* From Uiverse.io by Yaya12085 */ 
+.notes-info p,
+.pro p,
+.story p {
+    font-family : 'Roboto';
+    text-transform: none;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.pro span {
+    font-family: Neue Montreal, sans-serif;
+    text-transform: uppercase;
+}
+
+.story span {
+    font-family: Neue Montreal, sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+
 .code-editor {
-    max-width: 300px;
+    max-width: 350px;
     background-color: #1d1e22;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
@@ -421,32 +460,21 @@ html.has-scroll-dragging {
     color: rgb(212 212 212);
   }
   
-  .icon {
-    width: 20px;
-    transition: .2s ease;
-  }
-  
-  .icon:hover {
-    cursor: pointer;
-    border-radius: 50px;
-    background-color: #6e7281;
-  }
-  
   .editor-content {
     margin: 0 10px 10px;
     color: white;
   }
   
   .property {
-    margin-left: 30px;
+    margin-bottom: 4px;
   }
-  
-  .property:hover {
-    cursor: text;
+
+  .property span{
+    text-transform: none;
   }
-  
+
   .editor-content .color-0 {
-    color: rgb(86 156 214);
+    color: rgb(240, 222, 58);
   }
   
   .editor-content .color-1 {
@@ -458,7 +486,7 @@ html.has-scroll-dragging {
   }
   
   .editor-content .color-3 {
-    color: rgb(207 146 120);
+    color: rgb(207, 120, 149);
   }
   
   .color-preview-1,.color-preview-2 {
@@ -489,7 +517,6 @@ html.has-scroll-dragging {
   
   .box {
     display: inline-block;
-    align-items: center;
     width: 10px;
     height: 10px;
     padding: 1px;

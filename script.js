@@ -3,7 +3,7 @@ function displayContentBasedOnDevice() {
     const nav = document.querySelector('.nav-container');
     const desktopMessage = document.getElementById('desktop-message');
   
-    if (window.innerWidth <= 800) {
+    if (window.innerWidth <= 580) {
       appContent.style.display = 'block';
       nav.style.display = 'block';
       desktopMessage.style.display = 'none';
@@ -12,7 +12,7 @@ function displayContentBasedOnDevice() {
     else {
       appContent.style.display = 'none';
       nav.style.display = 'none';
-      desktopMessage.style.display = 'block';
+      desktopMessage.style.display = 'flex';
     }
   }
   
