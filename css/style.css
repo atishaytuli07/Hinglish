@@ -386,7 +386,7 @@ html.has-scroll-dragging {
 
 #desktop-message h1, #desktop-message h1 a{
     font-family: 'Roboto';
-    font-size: 50px;
+    font-size: 47px;
     font-weight: 400;
     letter-spacing: 1px;
     color: var(--color-light);
@@ -423,6 +423,7 @@ html.has-scroll-dragging {
     text-transform: none;
     font-size: 15px;
     line-height: 1.2;
+    text-align: justify;
 }
 
 .pro span {
@@ -436,9 +437,8 @@ html.has-scroll-dragging {
     color: white;
 }
 
-
 .code-editor {
-    max-width: 350px;
+    max-width: 370px;
     background-color: #1d1e22;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
