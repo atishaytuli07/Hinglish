@@ -83,6 +83,13 @@ h2 {
     font-size: 60px
 }
 
+h3 {
+    font-family: "Neue Montreal";
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
 p,
 a {
     font-family: Neue Montreal, sans-serif;
@@ -468,10 +475,15 @@ html.has-scroll-dragging {
   
   .property {
     margin-bottom: 4px;
+    text-align: left;
   }
 
   .property span{
     text-transform: none;
+  }
+
+  .editor-content p {
+    text-align: left;
   }
 
   .editor-content .color-0 {
@@ -591,4 +603,62 @@ html.has-scroll-dragging {
     100% {
       background-position: 180px;
     }
+  }
+
+  .newsletter {
+    padding: 60px 22.5px;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .newsletter h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+
+  .newsletter p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: var(--text-color-light);
+  }
+
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .subscribe-form input {
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-light);
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 14px;
+  }
+
+  .subscribe-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .subscribe-form button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    background: var(--color-light);
+    color: var(--color-dark);
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .subscribe-form button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
   }
